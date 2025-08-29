@@ -19,5 +19,14 @@ services:
     ports:
       - "6379:6379"
 
+  # UI Service for local development
+  ui-service:
+    build: ./ui-service
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+      - redis
+
 volumes:
   postgres_data:

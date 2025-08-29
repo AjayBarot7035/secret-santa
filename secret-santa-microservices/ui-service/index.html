@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa Microservices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-gift"></i> Secret Santa Microservices</h1>
+            <p>Generate Secret Santa assignments with our microservices architecture</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <h2><i class="fas fa-users"></i> Add Participants</h2>
+                <div class="employee-input">
+                    <input type="text" id="employeeName" placeholder="Employee Name" maxlength="50">
+                    <input type="email" id="employeeEmail" placeholder="Employee Email" maxlength="100">
+                    <button onclick="addEmployee()" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Employee
+                    </button>
+                </div>
+                
+                <div class="employee-list" id="employeeList">
+                    <h3>Participants (<span id="employeeCount">0</span>)</h3>
+                    <div id="employees" class="employees-grid"></div>
+                </div>
+
+                <div class="actions">
+                    <button onclick="generateAssignments()" class="btn btn-success" id="generateBtn">
+                        <i class="fas fa-magic"></i> Generate Secret Santa Assignments
+                    </button>
+                    <button onclick="clearAll()" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Clear All
+                    </button>
+                </div>
+            </section>
+
+            <!-- Animation Section -->
+            <section class="animation-section" id="animationSection" style="display: none;">
+                <h2><i class="fas fa-spinner fa-spin"></i> Generating Assignments...</h2>
+                <div class="animation-container">
+                    <div class="santa-hats">
+                        <div class="santa-hat" id="hat1">🎅</div>
+                        <div class="santa-hat" id="hat2">🎅</div>
+                        <div class="santa-hat" id="hat3">🎅</div>
+                    </div>
+                    <div class="gift-boxes">
+                        <div class="gift-box" id="gift1">🎁</div>
+                        <div class="gift-box" id="gift2">🎁</div>
+                        <div class="gift-box" id="gift3">🎁</div>
+                    </div>
+                    <div class="sparkles">
+                        <div class="sparkle" id="sparkle1">✨</div>
+                        <div class="sparkle" id="sparkle2">✨</div>
+                        <div class="sparkle" id="sparkle3">✨</div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="status-text" id="statusText">Initializing microservices...</p>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2><i class="fas fa-check-circle"></i> Secret Santa Assignments</h2>
+                <div class="assignments-container" id="assignmentsContainer"></div>
+                
+                <div class="export-section">
+                    <button onclick="exportToCSV()" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Export to CSV
+                    </button>
+                    <button onclick="shareResults()" class="btn btn-info">
+                        <i class="fas fa-share"></i> Share Results
+                    </button>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <h2><i class="fas fa-exclamation-triangle"></i> Oops! Something went wrong</h2>
+                <p id="errorMessage"></p>
+                <button onclick="hideError()" class="btn btn-primary">Try Again</button>
+            </section>
+        </main>
+
+        <!-- Architecture Info -->
+        <section class="architecture-info">
+            <h3><i class="fas fa-microchip"></i> Microservices Architecture</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🐐</div>
+                    <h4>CSV Parser Service</h4>
+                    <p>Go microservice for data parsing</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💎</div>
+                    <h4>Assignment Service</h4>
+                    <p>Rails service for assignment logic</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h4>API Gateway</h4>
+                    <p>Rails service for orchestration</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h4>UI Service</h4>
+                    <p>Frontend for user interaction</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -17,15 +17,16 @@ check_port() {
 # Check ports
 check_port 3000  # API Gateway
 check_port 3001  # Assignment Service
-check_port 8080  # CSV Parser Service
+check_port 8080  # UI Service
+check_port 8081  # CSV Parser Service
 check_port 5432  # PostgreSQL
 check_port 6379  # Redis
 
 echo "✅ All ports are available"
 
-# Start PostgreSQL and Redis if not running
-echo "📦 Starting dependencies..."
-docker-compose -f docker-compose.local.yml up -d postgres redis
+# Start PostgreSQL, Redis, and UI Service
+echo "📦 Starting dependencies and UI Service..."
+docker-compose -f docker-compose.local.yml up -d postgres redis ui-service
 
 # Wait for PostgreSQL to be ready
 echo "⏳ Waiting for PostgreSQL to be ready..."
@@ -62,8 +63,8 @@ cd csv-parser-service
 go build -o csv-parser-service
 
 # Start CSV Parser Service
-echo "🚀 Starting CSV Parser Service on port 8080..."
-./csv-parser-service &
+echo "🚀 Starting CSV Parser Service on port 8081..."
+PORT=8081 ./csv-parser-service &
 cd ..
 
 # Wait for services to start
@@ -75,7 +76,7 @@ echo "🧪 Testing services..."
 
 # Test CSV Parser Service
 echo "Testing CSV Parser Service..."
-curl -s http://localhost:8080/health | jq . || echo "CSV Parser Service not responding"
+curl -s http://localhost:8081/health | jq . || echo "CSV Parser Service not responding"
 
 # Test Assignment Service
 echo "Testing Assignment Service..."
@@ -89,9 +90,10 @@ echo ""
 echo "🎉 All services started successfully!"
 echo ""
 echo "📋 Service URLs:"
+echo "  UI Service:      http://localhost:8080"
 echo "  API Gateway:     http://localhost:3000"
 echo "  Assignment Service: http://localhost:3001"
-echo "  CSV Parser Service: http://localhost:8080"
+echo "  CSV Parser Service: http://localhost:8081"
 echo ""
 echo "🔧 Test the API:"
 echo "  curl -X POST http://localhost:3000/api/v1/secret_santa/generate_assignments \\"

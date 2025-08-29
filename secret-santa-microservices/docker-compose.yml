@@ -73,8 +73,6 @@ services:
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - CSV_PARSER_SERVICE_URL=http://csv-parser:8080
       - ASSIGNMENT_SERVICE_URL=http://assignment-service:3001
-    ports:
-      - "3000:3000"
     depends_on:
       postgres:
         condition: service_healthy
@@ -83,6 +81,16 @@ services:
       csv-parser:
         condition: service_started
       assignment-service:
+        condition: service_started
+    restart: unless-stopped
+
+  # UI Service
+  ui-service:
+    build: ./ui-service
+    ports:
+      - "8080:80"
+    depends_on:
+      api-gateway:
         condition: service_started
     restart: unless-stopped
 
