@@ -1,0 +1,36 @@
+  [1m[35m (321.0ms)[0m  [1m[35mCREATE DATABASE "api_gateway_development" ENCODING = 'unicode'[0m
+  [1m[35m (283.9ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35m (33.0ms)[0m  [1m[35mCREATE DATABASE "api_gateway_development" ENCODING = 'unicode'[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35m (31.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3191862946670817615)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (17.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-08-29 06:41:53.513888', '2025-08-29 06:41:53.513894') RETURNING "key"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3191862946670817615)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-29 12:12:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-29 12:13:08 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"csv_data"=>"name,email\nJohn Doe,john@example.com\nJane Smith,jane@example.com\nBob Wilson,bob@example.com\nAlice Brown,alice@example.com", "secret_santum"=>{"csv_data"=>"name,email\nJohn Doe,john@example.com\nJane Smith,jane@example.com\nBob Wilson,bob@example.com\nAlice Brown,alice@example.com"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-29 12:14:46 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"csv_data"=>"name,email\nJohn Doe,john@example.com\nJane Smith,jane@example.com\nBob Wilson,bob@example.com\nAlice Brown,alice@example.com", "secret_santum"=>{"csv_data"=>"name,email\nJohn Doe,john@example.com\nJane Smith,jane@example.com\nBob Wilson,bob@example.com\nAlice Brown,alice@example.com"}}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-29 12:15:55 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"csv_data"=>"name,email\nJohn Doe,john@example.com\nJane Smith,jane@example.com\nBob Wilson,bob@example.com\nAlice Brown,alice@example.com", "secret_santum"=>{"csv_data"=>"name,email\nJohn Doe,john@example.com\nJane Smith,jane@example.com\nBob Wilson,bob@example.com\nAlice Brown,alice@example.com"}}
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

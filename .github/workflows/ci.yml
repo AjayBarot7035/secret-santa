@@ -1,0 +1,195 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  AWS_REGION: us-east-1
+
+jobs:
+  test-csv-parser:
+    name: Test CSV Parser Service
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+        
+    - name: Cache Go modules
+      uses: actions/cache@v3
+      with:
+        path: ~/go/pkg/mod
+        key: ${{ runner.os }}-go-${{ hashFiles('secret-santa-microservices/csv-parser-service/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
+          
+    - name: Run CSV Parser tests
+      working-directory: ./secret-santa-microservices/csv-parser-service
+      run: |
+        go mod download
+        go test -v ./...
+        
+    - name: Build CSV Parser
+      working-directory: ./secret-santa-microservices/csv-parser-service
+      run: |
+        go build -o csv-parser-service .
+
+  test-assignment-service:
+    name: Test Assignment Service
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: assignment_service_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+          
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true
+        
+    - name: Install dependencies
+      working-directory: ./secret-santa-microservices/assignment-service
+      run: |
+        bundle install
+        
+    - name: Setup database
+      working-directory: ./secret-santa-microservices/assignment-service
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/assignment_service_test
+      run: |
+        bundle exec rails db:create
+        bundle exec rails db:migrate
+        
+    - name: Run tests
+      working-directory: ./secret-santa-microservices/assignment-service
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/assignment_service_test
+      run: |
+        bundle exec rspec
+
+  test-api-gateway:
+    name: Test API Gateway
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: api_gateway_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+          
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true
+        
+    - name: Install dependencies
+      working-directory: ./secret-santa-microservices/api-gateway
+      run: |
+        bundle install
+        
+    - name: Setup database
+      working-directory: ./secret-santa-microservices/api-gateway
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/api_gateway_test
+      run: |
+        bundle exec rails db:create
+        bundle exec rails db:migrate
+        
+    - name: Run tests
+      working-directory: ./secret-santa-microservices/api-gateway
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/api_gateway_test
+      run: |
+        bundle exec rspec
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: [test-csv-parser, test-assignment-service, test-api-gateway]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
+      with:
+        scan-type: 'fs'
+        scan-ref: './secret-santa-microservices'
+        format: 'sarif'
+        output: 'trivy-results.sarif'
+        
+    - name: Upload Trivy scan results to GitHub Security tab
+      uses: github/codeql-action/upload-sarif@v2
+      if: always()
+      with:
+        sarif_file: 'trivy-results.sarif'
+
+  terraform-validate:
+    name: Terraform Validation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+      with:
+        terraform_version: "1.5.0"
+        
+    - name: Terraform Format Check
+      working-directory: ./secret-santa-microservices/infrastructure/aws
+      run: terraform fmt -check
+      
+    - name: Terraform Init
+      working-directory: ./secret-santa-microservices/infrastructure/aws
+      run: terraform init
+      
+    - name: Terraform Validate
+      working-directory: ./secret-santa-microservices/infrastructure/aws
+      run: terraform validate
+      
+    - name: Terraform Plan
+      working-directory: ./secret-santa-microservices/infrastructure/aws
+      run: terraform plan -no-color
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: us-east-1

@@ -1,0 +1,47 @@
+  [1m[35m (507.4ms)[0m  [1m[35mCREATE DATABASE "assignment_service_development" ENCODING = 'unicode'[0m
+  [1m[35m (269.8ms)[0m  [1m[35mCREATE DATABASE "assignment_service_test" ENCODING = 'unicode'[0m
+SQS processor disabled - running in development mode with HTTP endpoints
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE DATABASE "assignment_service_development" ENCODING = 'unicode'[0m
+  [1m[35m (37.4ms)[0m  [1m[35mCREATE DATABASE "assignment_service_test" ENCODING = 'unicode'[0m
+  [1m[35m (37.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7557845110532981565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-08-29 06:41:12.312674', '2025-08-29 06:41:12.312677') RETURNING "key"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7557845110532981565)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+SQS processor disabled - running in development mode with HTTP endpoints
+Started GET "/api/v1/assignments/health" for ::1 at 2025-08-29 12:12:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AssignmentsController#health as */*
+Completed 200 OK in 27ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-29 12:13:36 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+SyntaxError (/Users/apple/projects/secret_santa/secret-santa-microservices/assignment-service/app/services/secret_santa_service.rb:42: syntax error, unexpected local variable or method, expecting `end' or dummy end
+...employee data: missing name' }n 
+...                              ^
+):
+  
+app/services/secret_santa_service.rb:42: syntax error, unexpected local variable or method, expecting `end' or dummy end
+app/controllers/api/v1/assignments_controller.rb:6:in `generate'
+SQS processor disabled - running in development mode with HTTP endpoints
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-29 12:14:28 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-29 12:15:55 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Wilson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Wilson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
