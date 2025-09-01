@@ -259,3 +259,19 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Designed for local development and testing
 - Implements clean architecture and separation of concerns
 - Features a magical Christmas-themed user interface
+
+## 📋 TODO
+
+### Infrastructure & DevOps
+- [ ] **AWS Setup** - Configure AWS infrastructure for production deployment
+- [ ] **Terraform** - Implement Infrastructure as Code for AWS resources
+- [ ] **AWS CLI Tasks** - Automate AWS operations and deployments
+- [ ] **Secret Management for AWS** - Implement secure secret storage using AWS Secrets Manager or Parameter Store
+
+### Frontend Enhancement
+- [ ] **Vue.js or React.js Application** - Replace plain JavaScript with modern frontend framework
+- [ ] **UI Tweaks** - Improve user interface design and user experience
+
+### Code Quality & Monitoring
+- [ ] **Rubocop Fixes** - Address Ruby code style and quality issues
+- [ ] **Observability Metrics** - Implement monitoring, logging, and metrics collection
