@@ -28,6 +28,9 @@ pickle-email-*.html
 !/log/.keep
 !/tmp/.keep
 
+# Ignore Rails cache files
+**/tmp/cache/**
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
