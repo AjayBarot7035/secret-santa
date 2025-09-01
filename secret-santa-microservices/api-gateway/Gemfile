@@ -29,20 +29,8 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
-# AWS SDK for SQS/SNS communication
-gem "aws-sdk-sqs"
-gem "aws-sdk-sns"
-
-# HTTP client for fallback communication
+# HTTP client for service communication
 gem "httparty"
-
-# Background jobs and caching
-gem "sidekiq"
-gem "redis"
-
-# API documentation
-gem "rswag-api"
-gem "rswag-ui"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -56,3 +44,8 @@ group :development, :test do
 end
 
 
+
+gem "rack-cors", "~> 3.0"
+
+gem "rspec-rails", "~> 8.0", groups: [:development, :test]
+gem "webmock", "~> 3.18", groups: [:test]

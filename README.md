@@ -1,6 +1,78 @@
-# Secret Santa Microservices
+# 🎅 Secret Santa Generator
 
-A production-ready microservices architecture for Secret Santa assignment generation, built with Go and Ruby on Rails, deployed on AWS with comprehensive CI/CD and monitoring.
+A magical Secret Santa assignment generator with an animated Christmas-themed UI, built with modern microservices architecture using Go and Ruby on Rails for local development and testing.
+
+![Secret Santa Generator](screenshots/main-dashboard.png)
+*The magical Secret Santa Generator dashboard with Santa's journey animation*
+
+## ✨ Features
+
+### 🎨 **Magical Christmas UI**
+- **Santa's Journey Animation**: Watch Santa and his 8 reindeer fly across a starry night sky
+- **Interactive Experience**: Give your participant list to Santa or his reindeer
+- **Christmas Theme**: Beautiful red and green gradient with snow effects
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
+
+### 📊 **CSV Upload & Management**
+- **Drag & Drop**: Easy CSV file upload with visual feedback
+- **Manual Entry**: Add participants one by one with validation
+- **Previous Assignments**: Upload previous year's assignments to avoid repetitive pairings
+- **Duplicate Detection**: Automatically removes duplicate names and emails
+- **Real-time Preview**: See your participants as you add them
+
+### 🎯 **Smart Assignment Generation**
+- **Circular Assignment**: Each person gives to the next person in the circle
+- **Constraint Handling**: Avoids previous year's assignments
+- **Validation**: Ensures no one gets themselves or forbidden assignments
+- **Progress Animation**: Watch Santa work his magic with real-time status updates
+
+### 📤 **Export & Share**
+- **CSV Export**: Download assignments in the exact format required
+- **Share Results**: Copy assignments to clipboard or share via native sharing
+- **Print Friendly**: Clean, printable assignment cards
+
+### 📋 **CSV Format Support**
+
+#### **Input Format (Participants)**
+```csv
+Name,Email
+John Doe,john@example.com
+Jane Smith,jane@example.com
+Bob Johnson,bob@example.com
+```
+
+#### **Input Format (Previous Assignments)**
+```csv
+Employee_Name,Employee_EmailID,Secret_Child_Name,Secret_Child_EmailID
+John Doe,john@example.com,Jane Smith,jane@example.com
+Jane Smith,jane@example.com,Bob Johnson,bob@example.com
+```
+
+#### **Output Format (Generated Assignments)**
+```csv
+Employee_Name,Employee_EmailID,Secret_Child_Name,Secret_Child_EmailID
+John Doe,john@example.com,Jane Smith,jane@example.com
+Jane Smith,jane@example.com,Bob Johnson,bob@example.com
+Bob Johnson,bob@example.com,John Doe,john@example.com
+```
+
+![CSV Upload Interface](screenshots/csv-upload.png)
+*Easy CSV upload with drag & drop functionality*
+
+![Participant Management](screenshots/participant-management.png)
+*Clean participant list with easy removal options*
+
+![Previous Assignments Upload](screenshots/previous-assignments.png)
+*Upload previous year's assignments to avoid repetitive pairings*
+
+![Assignment Generation Process](screenshots/assignment-process.png)
+*Watch Santa work his magic with real-time progress updates*
+
+![Assignment Results](screenshots/assignment-results.png)
+*Beautiful assignment cards with export and share options*
+
+![CSV Export Format](screenshots/csv-export.png)
+*Perfect CSV export with correct field names and formatting*
 
 ## 🏗️ Architecture Overview
 
@@ -9,8 +81,8 @@ This project implements a modern microservices architecture with the following c
 - **CSV Parser Service (Go)**: Handles CSV data parsing and validation
 - **Assignment Service (Rails)**: Generates Secret Santa assignments with business logic
 - **API Gateway (Rails)**: Orchestrates requests and provides unified API
-- **AWS Infrastructure**: ECS, ECR, ALB, SQS, SNS, CloudWatch
-- **CI/CD Pipeline**: GitHub Actions for automated testing and deployment
+- **UI Service (HTML/CSS/JS)**: Modern, animated web interface for user interaction
+- **Local Development**: Docker Compose for dependencies, HTTP communication between services
 
 ## 🚀 Quick Start
 
@@ -19,23 +91,31 @@ This project implements a modern microservices architecture with the following c
 - Docker and Docker Compose
 - Go 1.21+
 - Ruby 3.3+
-- AWS CLI (for production deployment)
-- Terraform (for infrastructure)
 
 ### Local Development
 
 1. **Clone the repository**
    ```bash
    git clone <your-repo-url>
-   cd secret-santa-microservices
+   cd secret-santa
    ```
 
 2. **Start local development environment**
    ```bash
+   cd secret-santa-microservices
    ./start_local_dev.sh
    ```
 
-3. **Test the API**
+3. **Access the UI**
+   - Open your browser and go to: **http://localhost:8080**
+   - Experience the magical Christmas-themed interface with Santa's journey animation
+   - Upload CSV files or add participants manually
+   - Watch Santa and his reindeer team work their magic!
+
+![Santa's Journey Animation](screenshots/santa-animation.png)
+*Santa and his 8 reindeer team flying across the night sky with stars and snowflakes*
+
+4. **Test the API (Optional)**
    ```bash
    # Health check
    curl http://localhost:3000/api/v1/secret_santa/health
@@ -52,7 +132,7 @@ This project implements a modern microservices architecture with the following c
      }'
    ```
 
-4. **Stop local development**
+5. **Stop local development**
    ```bash
    ./stop_local_dev.sh
    ```
@@ -61,40 +141,27 @@ This project implements a modern microservices architecture with the following c
 
 ```
 secret-santa-microservices/
-├── csv-parser-service/          # Go CSV parsing service
+├── csv-parser-service/         # Go CSV parsing service
 │   ├── internal/csvparser/     # Core parsing logic
-│   ├── main.go                 # HTTP server and SQS/SNS integration
-│   ├── Dockerfile              # Container configuration
+│   ├── main.go                 # HTTP server
 │   └── go.mod                  # Go dependencies
-├── assignment-service/          # Rails assignment generation service
+├── assignment-service/         # Rails assignment generation service
 │   ├── app/services/           # Business logic
 │   ├── app/controllers/        # API endpoints
-│   ├── app/jobs/               # Background job processing
 │   ├── spec/                   # RSpec tests
-│   ├── Dockerfile              # Container configuration
 │   └── Gemfile                 # Ruby dependencies
 ├── api-gateway/                # Rails API gateway
 │   ├── app/controllers/        # API orchestration
 │   ├── spec/                   # RSpec tests
-│   ├── Dockerfile              # Container configuration
 │   └── Gemfile                 # Ruby dependencies
-├── infrastructure/aws/         # Terraform infrastructure
-│   ├── main.tf                 # Core AWS resources
-│   ├── vpc.tf                  # Networking configuration
-│   ├── ecs.tf                  # Container orchestration
-│   ├── alb.tf                  # Load balancer
-│   ├── ecr.tf                  # Container registry
-│   ├── monitoring.tf           # CloudWatch and alerts
-│   └── variables.tf            # Terraform variables
-├── .github/workflows/          # CI/CD pipelines
-│   ├── ci.yml                  # Continuous integration
-│   ├── cd.yml                  # Continuous deployment
-│   └── monitoring.yml          # Health monitoring
-├── docker-compose.yml          # Production orchestration
+├── ui-service/                 # Frontend web interface
+│   ├── index.html              # Main HTML file
+│   ├── styles.css              # CSS styles and animations
+│   ├── script.js               # JavaScript functionality
 ├── docker-compose.local.yml    # Local development
 ├── start_local_dev.sh          # Local development script
 ├── stop_local_dev.sh           # Local development cleanup
-└── PROJECT_STATUS.md           # Detailed project status
+└── README.md                   # Detailed project documentation
 ```
 
 ## 🧪 Testing
@@ -120,59 +187,6 @@ bundle exec rspec
 - **CSV Parser**: Unit tests for parsing logic and HTTP handlers
 - **Assignment Service**: RSpec tests for business logic and API endpoints
 - **API Gateway**: Integration tests for service orchestration
-- **Infrastructure**: Terraform validation and planning
-
-## 🚀 Production Deployment
-
-### Prerequisites
-
-1. **AWS Account** with appropriate permissions
-2. **GitHub Secrets** configured:
-   - `AWS_ACCESS_KEY_ID`
-   - `AWS_SECRET_ACCESS_KEY`
-   - `AWS_ACCOUNT_ID`
-   - `SLACK_WEBHOOK_URL` (optional)
-
-### Deployment Process
-
-1. **Push to main branch** - Triggers automated CI/CD pipeline
-2. **CI Pipeline** - Runs tests, security scans, and infrastructure validation
-3. **CD Pipeline** - Builds Docker images, deploys to AWS ECS
-4. **Health Checks** - Verifies deployment success
-
-### Infrastructure Components
-
-- **ECS Fargate**: Container orchestration
-- **ECR**: Docker image storage
-- **ALB**: Application load balancer
-- **SQS/SNS**: Message queuing and notifications
-- **CloudWatch**: Monitoring and alerting
-- **VPC**: Network isolation and security
-
-## 📊 Monitoring and Observability
-
-### CloudWatch Dashboard
-
-Real-time monitoring of:
-- ECS service health and performance
-- ALB request metrics and response times
-- SQS queue depths and processing rates
-- Error rates and system performance
-
-### Alerts
-
-Automated notifications for:
-- Service health issues
-- High error rates (>10 5XX errors in 5 minutes)
-- High CPU utilization (>80%)
-- SQS queue backlogs (>100 messages)
-
-### Logs
-
-Centralized logging for all services:
-- `/ecs/secret-santa-csv-parser`
-- `/ecs/secret-santa-assignment-service`
-- `/ecs/secret-santa-api-gateway`
 
 ## 🔧 Configuration
 
@@ -180,48 +194,21 @@ Centralized logging for all services:
 
 #### CSV Parser Service
 ```bash
-AWS_REGION=us-east-1
-SQS_QUEUE_CSV_PARSER=secret-santa-csv-parser
-SNS_TOPIC_EMPLOYEE_DATA_PARSED=secret-santa-employee-data-parsed
-DEV_MODE=true  # For local development
+PORT=8081  # Default port for CSV Parser Service
 ```
 
 #### Assignment Service
 ```bash
-RAILS_ENV=production
-DATABASE_URL=postgresql://...
-REDIS_URL=redis://...
-AWS_REGION=us-east-1
-SQS_QUEUE_ASSIGNMENT_SERVICE=secret-santa-assignment-service
-SNS_TOPIC_ASSIGNMENTS_GENERATED=secret-santa-assignments-generated
-ENABLE_SQS_PROCESSOR=true
+RAILS_ENV=development
+DATABASE_URL=postgresql://postgres:password@localhost:5432/assignment_service_development
 ```
 
 #### API Gateway
 ```bash
-RAILS_ENV=production
-DATABASE_URL=postgresql://...
-REDIS_URL=redis://...
-AWS_REGION=us-east-1
-SNS_TOPIC_EMPLOYEE_DATA_RAW=secret-santa-employee-data-raw
-SQS_QUEUE_ASSIGNMENTS_COMPLETED=secret-santa-assignments-completed
+RAILS_ENV=development
+DATABASE_URL=postgresql://postgres:password@localhost:5432/api_gateway_development
+ASSIGNMENT_SERVICE_URL=http://localhost:3001
 ```
-
-## 🔒 Security Features
-
-- **Non-root containers**: All services run as non-root users
-- **IAM roles**: Least privilege access to AWS services
-- **Security groups**: Network-level access control
-- **VPC isolation**: Private subnets for services
-- **Secrets management**: AWS Secrets Manager integration
-- **Security scanning**: Trivy vulnerability scanning in CI
-
-## 📈 Scalability
-
-- **Auto-scaling**: ECS service auto-scaling based on CPU/memory
-- **Load balancing**: ALB distributes traffic across multiple instances
-- **Message queuing**: SQS handles asynchronous processing
-- **Horizontal scaling**: Stateless services can scale horizontally
 
 ## 🛠️ Development Workflow
 
@@ -233,15 +220,6 @@ SQS_QUEUE_ASSIGNMENTS_COMPLETED=secret-santa-assignments-completed
 4. **Test locally**: Use curl or Postman to test APIs
 5. **Stop services**: `./stop_local_dev.sh`
 
-### Production Deployment
-
-1. **Create feature branch**: `git checkout -b feature/new-feature`
-2. **Make changes**: Implement new functionality
-3. **Write tests**: Add comprehensive test coverage
-4. **Commit changes**: Follow conventional commit messages
-5. **Push and test**: CI pipeline validates changes
-6. **Merge to main**: CD pipeline deploys to production
-
 ## 🐛 Troubleshooting
 
 ### Common Issues
@@ -251,11 +229,6 @@ SQS_QUEUE_ASSIGNMENTS_COMPLETED=secret-santa-assignments-completed
 - **Database issues**: Ensure PostgreSQL is running and accessible
 - **Service communication**: Verify all services are healthy
 
-#### Production
-- **ECS service not starting**: Check CloudWatch logs and task definition
-- **ALB health check failing**: Verify service is running on correct port
-- **SQS messages not processing**: Check service logs and IAM permissions
-
 ### Useful Commands
 
 ```bash
@@ -263,13 +236,8 @@ SQS_QUEUE_ASSIGNMENTS_COMPLETED=secret-santa-assignments-completed
 curl http://localhost:3000/api/v1/secret_santa/health
 
 # View service logs
-docker-compose logs api-gateway
-
-# Check ECS service status (production)
-aws ecs describe-services --cluster secret-santa-cluster --services secret-santa-api-gateway
-
-# View CloudWatch logs (production)
-aws logs tail /ecs/secret-santa-api-gateway --follow
+docker-compose -f docker-compose.local.yml logs postgres
+docker-compose -f docker-compose.local.yml logs redis
 ```
 
 ## 🤝 Contributing
@@ -288,6 +256,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🙏 Acknowledgments
 
 - Built with modern microservices best practices
-- Leverages AWS cloud-native services
-- Implements comprehensive CI/CD and monitoring
-- Designed for production scalability and reliability
+- Designed for local development and testing
+- Implements clean architecture and separation of concerns
+- Features a magical Christmas-themed user interface

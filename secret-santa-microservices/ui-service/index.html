@@ -11,61 +11,206 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1><i class="fas fa-gift"></i> Secret Santa Microservices</h1>
-            <p>Generate Secret Santa assignments with our microservices architecture</p>
+            <h1><i class="fas fa-gift"></i> Secret Santa Generator</h1>
+            <p>Create magical Secret Santa assignments for your family, friends, or team</p>
         </header>
 
         <main class="main-content">
-            <!-- Input Section -->
-            <section class="input-section">
-                <h2><i class="fas fa-users"></i> Add Participants</h2>
-                <div class="employee-input">
-                    <input type="text" id="employeeName" placeholder="Employee Name" maxlength="50">
-                    <input type="email" id="employeeEmail" placeholder="Employee Email" maxlength="100">
-                    <button onclick="addEmployee()" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> Add Employee
-                    </button>
+            <!-- Santa's Journey Section -->
+            <section class="santa-journey-section">
+                <div class="journey-scene" id="journeyScene">
+                    <!-- Santa and Reindeer flying across the screen -->
+                    <div class="santa-reindeer-team" id="santaTeam">
+                        <div class="reindeer-lead">🦌</div>
+                        <div class="reindeer-second">🦌</div>
+                        <div class="reindeer-third">🦌</div>
+                        <div class="reindeer-fourth">🦌</div>
+                        <div class="reindeer-fifth">🦌</div>
+                        <div class="reindeer-sixth">🦌</div>
+                        <div class="reindeer-seventh">🦌</div>
+                        <div class="reindeer-eighth">🦌</div>
+                        <div class="santa-sleigh">🛷</div>
+                        <div class="santa">🎅</div>
+                        <div class="gifts">🎁</div>
+                    </div>
+                    
+                    <!-- Night sky with stars and moon -->
+                    <div class="night-sky">
+                        <div class="moon">🌕</div>
+                        <div class="star">⭐</div>
+                        <div class="star">⭐</div>
+                        <div class="star">⭐</div>
+                        <div class="star">⭐</div>
+                        <div class="star">⭐</div>
+                        <div class="star">⭐</div>
+                        <div class="star">⭐</div>
+                        <div class="star">⭐</div>
+                        <div class="star">⭐</div>
+                    </div>
+                    
+                    <!-- Snowflakes -->
+                    <div class="snowflakes">
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                        <div class="snowflake">❄️</div>
+                    </div>
                 </div>
                 
-                <div class="employee-list" id="employeeList">
-                    <h3>Participants (<span id="employeeCount">0</span>)</h3>
-                    <div id="employees" class="employees-grid"></div>
-                </div>
-
-                <div class="actions">
-                    <button onclick="generateAssignments()" class="btn btn-success" id="generateBtn">
-                        <i class="fas fa-magic"></i> Generate Secret Santa Assignments
-                    </button>
-                    <button onclick="clearAll()" class="btn btn-danger">
-                        <i class="fas fa-trash"></i> Clear All
-                    </button>
+                <!-- Interactive Elements -->
+                <div class="interaction-area" id="interactionArea">
+                    <div class="santa-stops" id="santaStops" style="display: none;">
+                        <div class="santa-stop-message">
+                            <h3>🎅 Ho Ho Ho! Hello there!</h3>
+                            <p>I need your list of participants for Secret Santa!</p>
+                            <div class="list-delivery-options">
+                                <button onclick="giveListToSanta()" class="btn btn-primary">
+                                    <i class="fas fa-gift"></i> Give List to Santa
+                                </button>
+                                <button onclick="giveListToReindeer()" class="btn btn-info">
+                                    <i class="fas fa-paw"></i> Give List to Reindeer
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="list-input-area" id="listInputArea" style="display: none;">
+                        <div class="list-input-container">
+                            <h3>📝 Create Your Participant List</h3>
+                            
+                            <!-- CSV Upload -->
+                            <div class="csv-upload-mini">
+                                <div class="upload-zone" id="uploadZone">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Drop CSV file here or click to browse</p>
+                                    <input type="file" id="csvFile" accept=".csv" style="display: none;">
+                                    <button id="chooseFileBtn" class="btn btn-outline">
+                                        Choose File
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Previous Year's Assignments (Optional) -->
+                            <div class="previous-assignments-mini">
+                                <h4><i class="fas fa-history"></i> Previous Year's Assignments (Optional)</h4>
+                                <p class="help-text">Upload previous year's assignments to avoid repetitive pairings</p>
+                                <div class="upload-zone-small" id="previousUploadZone">
+                                    <i class="fas fa-file-csv"></i>
+                                    <p>Drop previous assignments CSV here</p>
+                                    <input type="file" id="previousCsvFile" accept=".csv" style="display: none;">
+                                    <button id="choosePreviousFileBtn" class="btn btn-outline-small" onclick="document.getElementById('previousCsvFile').click()">
+                                        Choose Previous Assignments
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Manual Input -->
+                            <div class="manual-input-mini">
+                                <h4>Or add manually:</h4>
+                                <div class="input-row">
+                                    <input type="text" id="employeeName" placeholder="Name" maxlength="50">
+                                    <input type="email" id="employeeEmail" placeholder="Email" maxlength="100">
+                                    <button onclick="addEmployee()" class="btn btn-primary">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Participant List -->
+                            <div class="participant-list" id="participantList">
+                                <h4>Your Participants (<span id="employeeCount">0</span>)</h4>
+                                <div id="employees" class="employees-mini-grid"></div>
+                            </div>
+                            
+                            <div class="list-actions">
+                                <button onclick="submitListToSanta()" class="btn btn-success" id="submitListBtn">
+                                    <i class="fas fa-paper-plane"></i> Send List to Santa
+                                </button>
+                                <button onclick="resetList()" class="btn btn-secondary">
+                                    <i class="fas fa-redo"></i> Start Over
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assignment-ready" id="assignmentReady" style="display: none;">
+                        <div class="ready-message">
+                            <h3>🎁 Perfect! Your list is ready!</h3>
+                            <p>Santa has your <span id="readyCount">0</span> participants</p>
+                            <button onclick="startSantaAssignment()" class="btn btn-success btn-large">
+                                <i class="fas fa-magic"></i> Let Santa Make Assignments!
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- Animation Section -->
             <section class="animation-section" id="animationSection" style="display: none;">
-                <h2><i class="fas fa-spinner fa-spin"></i> Generating Assignments...</h2>
+                <h2><i class="fas fa-spinner fa-spin"></i> Santa is working his magic...</h2>
                 <div class="animation-container">
                     <div class="santa-hats">
                         <div class="santa-hat" id="hat1">🎅</div>
                         <div class="santa-hat" id="hat2">🎅</div>
                         <div class="santa-hat" id="hat3">🎅</div>
+                        <div class="santa-hat" id="hat4">🎅</div>
+                        <div class="santa-hat" id="hat5">🎅</div>
                     </div>
                     <div class="gift-boxes">
                         <div class="gift-box" id="gift1">🎁</div>
                         <div class="gift-box" id="gift2">🎁</div>
                         <div class="gift-box" id="gift3">🎁</div>
+                        <div class="gift-box" id="gift4">🎁</div>
+                        <div class="gift-box" id="gift5">🎁</div>
                     </div>
                     <div class="sparkles">
                         <div class="sparkle" id="sparkle1">✨</div>
                         <div class="sparkle" id="sparkle2">✨</div>
                         <div class="sparkle" id="sparkle3">✨</div>
+                        <div class="sparkle" id="sparkle4">✨</div>
+                        <div class="sparkle" id="sparkle5">✨</div>
+                        <div class="sparkle" id="sparkle6">✨</div>
+                        <div class="sparkle" id="sparkle7">✨</div>
+                        <div class="sparkle" id="sparkle8">✨</div>
+                    </div>
+                    <div class="snowflakes">
+                        <div class="snowflake" id="snowflake1">❄️</div>
+                        <div class="snowflake" id="snowflake2">❄️</div>
+                        <div class="snowflake" id="snowflake3">❄️</div>
+                        <div class="snowflake" id="snowflake4">❄️</div>
+                        <div class="snowflake" id="snowflake5">❄️</div>
+                        <div class="snowflake" id="snowflake6">❄️</div>
+                    </div>
+                    <div class="microservices">
+                        <div class="service-icon" id="service1">🐐</div>
+                        <div class="service-icon" id="service2">💎</div>
+                        <div class="service-icon" id="service3">🌐</div>
                     </div>
                 </div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
-                <p class="status-text" id="statusText">Initializing microservices...</p>
+                <p class="status-text" id="statusText">Santa is getting ready...</p>
+                <div class="santa-workshop-status" id="santaWorkshopStatus">
+                    <div class="status-item" id="status1">
+                        <i class="fas fa-circle status-dot"></i>
+                        <span>Reading the list</span>
+                    </div>
+                    <div class="status-item" id="status2">
+                        <i class="fas fa-circle status-dot"></i>
+                        <span>Checking it twice</span>
+                    </div>
+                    <div class="status-item" id="status3">
+                        <i class="fas fa-circle status-dot"></i>
+                        <span>Making assignments</span>
+                    </div>
+                </div>
             </section>
 
             <!-- Results Section -->
@@ -91,32 +236,7 @@
             </section>
         </main>
 
-        <!-- Architecture Info -->
-        <section class="architecture-info">
-            <h3><i class="fas fa-microchip"></i> Microservices Architecture</h3>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🐐</div>
-                    <h4>CSV Parser Service</h4>
-                    <p>Go microservice for data parsing</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💎</div>
-                    <h4>Assignment Service</h4>
-                    <p>Rails service for assignment logic</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌐</div>
-                    <h4>API Gateway</h4>
-                    <p>Rails service for orchestration</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h4>UI Service</h4>
-                    <p>Frontend for user interaction</p>
-                </div>
-            </div>
-        </section>
+        
     </div>
 
     <script src="script.js"></script>

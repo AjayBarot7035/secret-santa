@@ -1,9 +1,8 @@
 #!/bin/bash
 
-echo "🚀 Starting Secret Santa Microservices in LOCAL DEVELOPMENT mode..."
+echo "🚀 Starting Secret Santa Generator in LOCAL DEVELOPMENT mode..."
 
 # Set development environment variables
-export DEV_MODE=true
 export RAILS_ENV=development
 
 # Function to check if a port is available
@@ -98,7 +97,7 @@ echo ""
 echo "🔧 Test the API:"
 echo "  curl -X POST http://localhost:3000/api/v1/secret_santa/generate_assignments \\"
 echo "    -H 'Content-Type: application/json' \\"
-echo "    -d '{\"csv_data\":\"name,email\\nJohn Doe,john@example.com\\nJane Smith,jane@example.com\"}'"
+echo "    -d '{\"employees\":[{\"name\":\"John Doe\",\"email\":\"john@example.com\"},{\"name\":\"Jane Smith\",\"email\":\"jane@example.com\"}]}'"
 echo ""
 echo "🛑 To stop all services:"
 echo "  ./stop_local_dev.sh"

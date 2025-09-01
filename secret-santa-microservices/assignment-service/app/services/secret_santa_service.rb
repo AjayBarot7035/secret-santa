@@ -4,7 +4,7 @@ class SecretSantaService
   end
 
   def generate_assignments(employees, previous_assignments)
-    # Validate employees first
+    # Validate employees first (including duplicates)
     validation_result = validate_employees(employees)
     unless validation_result[:valid]
       return {
@@ -14,9 +14,12 @@ class SecretSantaService
       }
     end
 
+    # Remove duplicates after validation (keep first occurrence)
+    cleaned_employees = remove_duplicates(employees)
+
     # Try multiple times to generate valid assignments
     100.times do
-      result = try_generate_assignments(employees, previous_assignments)
+      result = try_generate_assignments(cleaned_employees, previous_assignments)
       return result if result[:success]
     end
 
@@ -25,6 +28,28 @@ class SecretSantaService
       error: 'Unable to generate valid assignments after multiple attempts',
       assignments: []
     }
+  end
+
+  def remove_duplicates(employees)
+    seen_names = Set.new
+    seen_emails = Set.new
+    cleaned_employees = []
+    
+    employees.each do |employee|
+      name_key = employee[:name].to_s.strip.downcase
+      email_key = employee[:email].to_s.strip.downcase
+      
+      # Skip if we've already seen this name or email
+      if seen_names.include?(name_key) || seen_emails.include?(email_key)
+        next
+      end
+      
+      seen_names.add(name_key)
+      seen_emails.add(email_key)
+      cleaned_employees << employee
+    end
+    
+    cleaned_employees
   end
 
   def validate_employees(employees)
@@ -47,15 +72,19 @@ class SecretSantaService
     end
 
     # Check for duplicates
-    names = employees.map { |e| e[:name] }
-    emails = employees.map { |e| e[:email] }
+    names = employees.map { |e| e[:name].to_s.strip.downcase }
+    emails = employees.map { |e| e[:email].to_s.strip.downcase }
     
-    if names.uniq.length != names.length
-      return { valid: false, error: 'duplicate employee data found' }
+    # Find duplicate names
+    duplicate_names = names.select { |name| names.count(name) > 1 }.uniq
+    if duplicate_names.any?
+      return { valid: false, error: "Duplicate names found: #{duplicate_names.join(', ')}" }
     end
     
-    if emails.uniq.length != emails.length
-      return { valid: false, error: 'duplicate employee data found' }
+    # Find duplicate emails
+    duplicate_emails = emails.select { |email| emails.count(email) > 1 }.uniq
+    if duplicate_emails.any?
+      return { valid: false, error: "Duplicate emails found: #{duplicate_emails.join(', ')}" }
     end
 
     { valid: true, error: nil }

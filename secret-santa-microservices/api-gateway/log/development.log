@@ -34,3 +34,1032 @@ Processing by Api::V1::SecretSantaController#generate_assignments as */*
 Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 01:52:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 01:53:33 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 01:53:50 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 01:54:43 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 01:55:43 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 01:56:01 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 393ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:02:30 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:02:31 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:02:48 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-08-30 02:02:52 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/apple/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-7.2.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/apple/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-7.2.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 14.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 18.4ms)
+
+
+Started GET "/icon.png" for ::1 at 2025-08-30 02:02:52 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:03:00 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:03:22 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:03:25 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:04:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (14.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:04:38 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:04:40 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:04:42 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:04:44 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:05:03 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:05:11 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:05:54 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:07:11 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:07:25 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:07:32 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:07:42 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:08:06 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:09:33 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:12:28 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:16:13 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:17:06 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:18:07 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:19:02 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:19:10 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:23:00 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:24:32 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:25:03 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:25:33 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:27:28 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:27:40 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:28:07 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:28:32 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:29:24 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:29:36 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:29:46 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:31:23 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:31:34 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:32:04 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:32:17 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:32:28 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:32:38 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:33:16 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:34:37 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:34:52 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:35:12 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:35:24 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:35:57 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/generate_assignments"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:37:57 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+Started OPTIONS "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:38:14 +0530
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/secret_santa/health"):
+  
+  [1m[35m (90.5ms)[0m  [1m[35mCREATE DATABASE "api_gateway_development" ENCODING = 'unicode'[0m
+  [1m[35m (29.1ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:43:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 8.2ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:43:26 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 450ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 10.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:43:51 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:44:07 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:45:53 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:46:30 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:48:15 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:49:36 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:49:41 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"John Doe", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"John Doe", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 60ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:49:53 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:50:02 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-08-30 02:50:12 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-08-30 02:50:34 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 49ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 18:45:06 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (19.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SecretSantaController#health as */*
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 7.5ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 18:45:52 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"John Doe", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"John Doe", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 6.6ms)
+
+
+Started GET "/" for ::1 at 2025-09-01 18:46:11 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/apple/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-7.2.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/apple/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-7.2.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 10.2ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 18:46:20 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 18:48:01 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 18:48:24 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 18:55:30 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[{"employee_name"=>"John Doe", "employee_email"=>"[FILTERED]", "secret_child_name"=>"[FILTERED]", "secret_child_email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[{"employee_name"=>"John Doe", "employee_email"=>"[FILTERED]", "secret_child_name"=>"[FILTERED]", "secret_child_email"=>"[FILTERED]"}]}}
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 18:55:43 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 18:57:47 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 18:58:22 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:00:04 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:01:53 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:02:23 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:04:39 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:05:12 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:06:31 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:06:55 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:07:24 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:07:46 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:07:49 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:08:06 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:09:32 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:11:12 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:13:52 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:14:09 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:15:17 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}]}}
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/icon.png" for ::1 at 2025-09-01 19:15:39 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:15:47 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:15:53 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:16:28 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 32ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:17:07 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:17:24 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:22:27 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:25:13 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/secret_santa/health" for ::1 at 2025-09-01 19:26:44 +0530
+Processing by Api::V1::SecretSantaController#health as */*
+  Parameters: {"secret_santum"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/secret_santa/generate_assignments" for ::1 at 2025-09-01 19:30:19 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (23.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (255.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (201.7ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (33.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (13.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:19:32.125821', '2025-09-01 14:19:32.125825') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (1.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:19:32.157507' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (15.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:19:32.176274', '2025-09-01 14:19:32.176277') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (18.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (97.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (201.0ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (40.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (23.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (17.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:19:34.622510', '2025-09-01 14:19:34.622514') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:19:34.656660' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (11.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:19:34.678688', '2025-09-01 14:19:34.678691') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (132.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (169.0ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (42.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (22.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:20:31.116686', '2025-09-01 14:20:31.116691') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:20:31.149559' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:20:31.165042', '2025-09-01 14:20:31.165046') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"csv_data"=>"name,email\nJohn Doe,john@example.com\nJane Smith,jane@example.com\nBob Johnson,bob@example.com\nAlice Brown,alice@example.com"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"csv_data"=>"invalid,csv,format"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"csv_data"=>"name,email\nJohn Doe,john@example.com"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#health as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (78.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (178.0ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (45.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:28:55.155282', '2025-09-01 14:28:55.155287') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:28:55.159829' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:28:55.164675', '2025-09-01 14:28:55.164679') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}]}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}]}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#health as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (102.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (492.8ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (103.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:29:09.149037', '2025-09-01 14:29:09.149043') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:29:09.156606' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:29:09.162047', '2025-09-01 14:29:09.162056') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}]}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}]}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#health as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (101.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (173.5ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (40.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (18.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:30:02.193508', '2025-09-01 14:30:02.193512') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:30:02.198608' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:30:02.203978', '2025-09-01 14:30:02.203981') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (122.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (194.5ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (41.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:31:36.460066', '2025-09-01 14:31:36.460075') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:31:36.468776' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (16.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:31:36.474149', '2025-09-01 14:31:36.474152') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (99.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (171.3ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (43.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (54.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:35:05.691883', '2025-09-01 14:35:05.691887') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:35:05.697869' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (15.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:35:05.705052', '2025-09-01 14:35:05.705056') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (13.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (122.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (170.7ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (43.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:35:44.276472', '2025-09-01 14:35:44.276477') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:35:44.281559' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:35:44.286353', '2025-09-01 14:35:44.286363') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (107.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (190.9ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (46.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (23.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (15.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:36:42.171032', '2025-09-01 14:36:42.171036') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:36:42.176573' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:36:42.181759', '2025-09-01 14:36:42.181764') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (99.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (165.6ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (45.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:37:35.569956', '2025-09-01 14:37:35.569960') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:37:35.575113' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:37:35.580006', '2025-09-01 14:37:35.580009') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (102.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (168.5ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (39.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:38:11.864943', '2025-09-01 14:38:11.864947') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:38:11.868524' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:38:11.872862', '2025-09-01 14:38:11.872864') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: www.example.com
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (103.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (196.7ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (42.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (21.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:38:43.311926', '2025-09-01 14:38:43.311932') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:38:43.315642' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:38:43.319578', '2025-09-01 14:38:43.319581') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/api/v1/secret_santa/health" for 127.0.0.1 at 2025-09-01 20:08:43 +0530
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SecretSantaController#health as HTML
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (98.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (170.1ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (41.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:39:30.917517', '2025-09-01 14:39:30.917522') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:39:30.921670' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:39:30.926151', '2025-09-01 14:39:30.926154') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/api/v1/secret_santa/health" for 127.0.0.1 at 2025-09-01 20:09:31 +0530
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SecretSantaController#health as HTML
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/secret_santa/generate_assignments" for 127.0.0.1 at 2025-09-01 20:09:31 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/secret_santa/generate_assignments" for 127.0.0.1 at 2025-09-01 20:09:31 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}]}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}]}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#health as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (17.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (115.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_gateway_test"[0m
+  [1m[35m (335.6ms)[0m  [1m[35mCREATE DATABASE "api_gateway_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (42.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (20.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:39:52.317996', '2025-09-01 14:39:52.317999') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (1.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:39:52.322324' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:39:52.328462', '2025-09-01 14:39:52.328465') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/api/v1/secret_santa/health" for 127.0.0.1 at 2025-09-01 20:09:52 +0530
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SecretSantaController#health as HTML
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/secret_santa/generate_assignments" for 127.0.0.1 at 2025-09-01 20:09:52 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/api/v1/secret_santa/generate_assignments" for 127.0.0.1 at 2025-09-01 20:09:52 +0530
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "secret_santum"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}]}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#generate_assignments as HTML
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}, {"name"=>"Alice Brown", "email"=>"[FILTERED]"}]}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::SecretSantaController#health as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m

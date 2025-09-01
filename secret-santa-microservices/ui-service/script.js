@@ -2,9 +2,11 @@
 let employees = [];
 let assignments = [];
 let isGenerating = false;
+let csvData = null;
+let previousAssignments = [];
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:3000/api/v1'\;
+const API_BASE_URL = 'http://localhost:3000/api/v1';
 
 // DOM Elements
 const employeeNameInput = document.getElementById('employeeName');
@@ -22,6 +24,9 @@ const errorMessage = document.getElementById('errorMessage');
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
+    // Start the Santa journey
+    startSantaJourney();
+    
     // Add enter key support for inputs
     employeeNameInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
@@ -35,9 +40,97 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Load sample data for demo
-    loadSampleData();
+    // CSV file upload handling
+    setupCSVUpload();
+    
+    // Previous assignments upload handling (with delay to ensure DOM is ready)
+    setTimeout(() => {
+        setupPreviousAssignmentsUpload();
+    }, 100);
 });
+
+// Santa Journey Functions
+function startSantaJourney() {
+    const santaTeam = document.getElementById('santaTeam');
+    
+    // Start Santa running across the screen
+    setTimeout(() => {
+        santaTeam.classList.add('running');
+        
+        // Stop Santa in the middle after 3 seconds
+        setTimeout(() => {
+            santaTeam.classList.remove('running');
+            santaTeam.classList.add('stopped');
+            
+            // Show Santa's message
+            setTimeout(() => {
+                document.getElementById('santaStops').style.display = 'block';
+            }, 500);
+        }, 3000);
+    }, 1000);
+}
+
+function giveListToSanta() {
+    document.getElementById('santaStops').style.display = 'none';
+    document.getElementById('listInputArea').style.display = 'block';
+    
+    // Add some Santa magic
+    const santaTeam = document.getElementById('santaTeam');
+    santaTeam.style.transform = 'translate(-50%, -50%) scale(1.1)';
+    setTimeout(() => {
+        santaTeam.style.transform = 'translate(-50%, -50%) scale(1)';
+    }, 200);
+}
+
+function giveListToReindeer() {
+    document.getElementById('santaStops').style.display = 'none';
+    document.getElementById('listInputArea').style.display = 'block';
+    
+    // Add some reindeer magic
+    const santaTeam = document.getElementById('santaTeam');
+    santaTeam.style.transform = 'translate(-50%, -50%) rotate(5deg)';
+    setTimeout(() => {
+        santaTeam.style.transform = 'translate(-50%, -50%) rotate(0deg)';
+    }, 200);
+}
+
+function submitListToSanta() {
+    if (employees.length < 2) {
+        showError('You need at least 2 participants for Secret Santa');
+        return;
+    }
+    
+    document.getElementById('listInputArea').style.display = 'none';
+    document.getElementById('assignmentReady').style.display = 'block';
+    document.getElementById('readyCount').textContent = employees.length;
+    
+    // Santa celebrates
+    const santaTeam = document.getElementById('santaTeam');
+    santaTeam.style.transform = 'translate(-50%, -50%) scale(1.2)';
+    setTimeout(() => {
+        santaTeam.style.transform = 'translate(-50%, -50%) scale(1)';
+    }, 300);
+}
+
+function startSantaAssignment() {
+    document.getElementById('assignmentReady').style.display = 'none';
+    document.getElementById('animationSection').style.display = 'block';
+    
+    // Make Santa fly away to his workshop
+    const santaTeam = document.getElementById('santaTeam');
+    santaTeam.classList.remove('stopped');
+    santaTeam.classList.add('running');
+    
+    // Start the assignment process
+    generateAssignments();
+}
+
+function resetList() {
+    employees = [];
+    updateEmployeeDisplay();
+    document.getElementById('listInputArea').style.display = 'none';
+    document.getElementById('santaStops').style.display = 'block';
+}
 
 // Add employee to the list
 function addEmployee() {
@@ -55,7 +148,7 @@ function addEmployee() {
     }
     
     if (employees.some(emp => emp.email === email)) {
-        showError('An employee with this email already exists');
+        showError('A participant with this email already exists');
         return;
     }
     
@@ -82,20 +175,26 @@ function removeEmployee(email) {
 function updateEmployeeDisplay() {
     employeeCount.textContent = employees.length;
     
-    employeeList.innerHTML = employees.map(emp => `
-        <div class="employee-card">
-            <div class="employee-info">
-                <h4>${emp.name}</h4>
-                <p>${emp.email}</p>
+    const employeesContainer = document.getElementById('employees');
+    if (employeesContainer) {
+        employeesContainer.innerHTML = employees.map(emp => `
+            <div class="employee-card-mini">
+                <div class="employee-info">
+                    <strong>${emp.name}</strong>
+                    <small>${emp.email}</small>
+                </div>
+                <button class="remove-btn" onclick="removeEmployee('${emp.email}')" style="background: #dc3545; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <button class="remove-btn" onclick="removeEmployee('${emp.email}')">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    `).join('');
+        `).join('');
+    }
     
-    // Update generate button state
-    generateBtn.disabled = employees.length < 2;
+    // Update submit button state
+    const submitListBtn = document.getElementById('submitListBtn');
+    if (submitListBtn) {
+        submitListBtn.disabled = employees.length < 2;
+    }
 }
 
 // Generate Secret Santa assignments
@@ -120,7 +219,10 @@ async function generateAssignments() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ employees })
+            body: JSON.stringify({ 
+                employees: employees,
+                previous_assignments: previousAssignments
+            })
         });
         
         if (!response.ok) {
@@ -145,26 +247,52 @@ async function generateAssignments() {
     }
 }
 
-// Simulate microservices processing with animations
+// Simulate Santa's workshop processing with animations
 async function simulateMicroservicesProcess() {
     const steps = [
-        { progress: 20, status: 'Parsing employee data...' },
-        { progress: 40, status: 'Validating assignments...' },
-        { progress: 60, status: 'Generating Secret Santa pairs...' },
-        { progress: 80, status: 'Finalizing assignments...' },
-        { progress: 100, status: 'Assignments complete!' }
+        { progress: 20, status: 'Santa is reading the list...', service: 1 },
+        { progress: 35, status: 'Checking who\'s been naughty or nice...', service: 1 },
+        { progress: 50, status: 'Santa is checking the list twice...', service: 2 },
+        { progress: 65, status: 'Making Secret Santa assignments...', service: 2 },
+        { progress: 80, status: 'Wrapping up the assignments...', service: 3 },
+        { progress: 100, status: 'Ho Ho Ho! Assignments are ready!', service: 3 }
     ];
     
     for (let i = 0; i < steps.length; i++) {
-        await new Promise(resolve => setTimeout(resolve, 800));
-        updateProgress(steps[i].progress, steps[i].status);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        updateProgress(steps[i].progress, steps[i].status, steps[i].service);
     }
 }
 
 // Update progress bar and status
-function updateProgress(progress, status) {
+function updateProgress(progress, status, service = null) {
     progressFill.style.width = `${progress}%`;
     statusText.textContent = status;
+    
+    // Update Santa's workshop status indicators
+    if (service) {
+        // Reset all status items
+        document.querySelectorAll('.status-item').forEach(item => {
+            item.classList.remove('active', 'completed');
+        });
+        
+        // Mark current step as active
+        if (service <= 3) {
+            const statusItem = document.getElementById(`status${service}`);
+            if (statusItem) {
+                statusItem.classList.add('active');
+            }
+        }
+        
+        // Mark previous steps as completed
+        for (let i = 1; i < service; i++) {
+            const statusItem = document.getElementById(`status${i}`);
+            if (statusItem) {
+                statusItem.classList.remove('active');
+                statusItem.classList.add('completed');
+            }
+        }
+    }
 }
 
 // Show animation section
@@ -219,11 +347,16 @@ function hideError() {
 function clearAll() {
     employees = [];
     assignments = [];
+    previousAssignments = [];
     updateEmployeeDisplay();
     hideError();
     resultsSection.style.display = 'none';
     animationSection.style.display = 'none';
     employeeNameInput.focus();
+    
+    // Clear file inputs
+    document.getElementById('csvFile').value = '';
+    document.getElementById('previousCsvFile').value = '';
 }
 
 // Export to CSV
@@ -233,11 +366,36 @@ function exportToCSV() {
         return;
     }
     
+    // Validate assignments data
+    const validAssignments = assignments.filter(assignment => {
+        return assignment.santa_name && assignment.santa_email && 
+               assignment.secret_child_name && assignment.secret_child_email;
+    });
+    
+    if (validAssignments.length === 0) {
+        showError('No valid assignments to export');
+        return;
+    }
+    
     const csvContent = [
-        'Santa Name,Santa Email,Secret Child Name,Secret Child Email',
-        ...assignments.map(assignment => 
-            `${assignment.santa_name},${assignment.santa_email},${assignment.secret_child_name},${assignment.secret_child_email}`
-        )
+        'Employee_Name,Employee_EmailID,Secret_Child_Name,Secret_Child_EmailID',
+        ...validAssignments.map(assignment => {
+            // Ensure each field is properly separated and escaped
+            const row = [
+                assignment.santa_name || '',
+                assignment.santa_email || '',
+                assignment.secret_child_name || '',
+                assignment.secret_child_email || ''
+            ].map(field => {
+                // Escape quotes and wrap in quotes if contains comma
+                if (field && (field.includes(',') || field.includes('"'))) {
+                    return `"${field.replace(/"/g, '""')}"`;
+                }
+                return field;
+            }).join(',');
+            
+            return row;
+        })
     ].join('\n');
     
     const blob = new Blob([csvContent], { type: 'text/csv' });
@@ -287,6 +445,291 @@ function loadSampleData() {
     updateEmployeeDisplay();
 }
 
+// CSV Upload Functions
+function setupCSVUpload() {
+    const uploadZone = document.getElementById('uploadZone');
+    const csvFile = document.getElementById('csvFile');
+    const chooseFileBtn = document.getElementById('chooseFileBtn');
+    
+    if (uploadZone && csvFile) {
+        // File input change event
+        csvFile.addEventListener('change', handleFileSelect);
+        
+        // Drag and drop events
+        uploadZone.addEventListener('dragover', handleDragOver);
+        uploadZone.addEventListener('dragleave', handleDragLeave);
+        uploadZone.addEventListener('drop', handleDrop);
+        
+        // Only the "Choose CSV File" button triggers file picker
+        if (chooseFileBtn) {
+            chooseFileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                csvFile.click();
+            });
+        }
+    }
+}
+
+// Previous Assignments Upload Functions
+function setupPreviousAssignmentsUpload() {
+    const previousUploadZone = document.getElementById('previousUploadZone');
+    const previousCsvFile = document.getElementById('previousCsvFile');
+    const choosePreviousFileBtn = document.getElementById('choosePreviousFileBtn');
+    
+    if (previousUploadZone && previousCsvFile) {
+        // File input change event
+        previousCsvFile.addEventListener('change', handlePreviousFileSelect);
+        
+        // Drag and drop events
+        previousUploadZone.addEventListener('dragover', handlePreviousDragOver);
+        previousUploadZone.addEventListener('dragleave', handlePreviousDragLeave);
+        previousUploadZone.addEventListener('drop', handlePreviousDrop);
+        
+        // Only the "Choose Previous Assignments" button triggers file picker
+        if (choosePreviousFileBtn) {
+            choosePreviousFileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                previousCsvFile.click();
+            });
+        }
+    }
+}
+
+function handlePreviousDragOver(e) {
+    e.preventDefault();
+    const previousUploadZone = document.getElementById('previousUploadZone');
+    if (previousUploadZone) {
+        previousUploadZone.classList.add('dragover');
+    }
+}
+
+function handlePreviousDragLeave(e) {
+    e.preventDefault();
+    const previousUploadZone = document.getElementById('previousUploadZone');
+    if (previousUploadZone) {
+        previousUploadZone.classList.remove('dragover');
+    }
+}
+
+function handlePreviousDrop(e) {
+    e.preventDefault();
+    const previousUploadZone = document.getElementById('previousUploadZone');
+    if (previousUploadZone) {
+        previousUploadZone.classList.remove('dragover');
+    }
+    
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+        handlePreviousFile(files[0]);
+    }
+}
+
+function handlePreviousFileSelect(e) {
+    const file = e.target.files[0];
+    if (file) {
+        handlePreviousFile(file);
+    }
+}
+
+function handlePreviousFile(file) {
+    if (!file.name.toLowerCase().endsWith('.csv')) {
+        showError('Please select a valid CSV file for previous assignments');
+        return;
+    }
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const csvContent = e.target.result;
+        importPreviousAssignments(csvContent);
+    };
+    reader.readAsText(file);
+}
+
+function importPreviousAssignments(csvContent) {
+    if (!csvContent) {
+        showError('No CSV data to import for previous assignments');
+        return;
+    }
+    
+    try {
+        const lines = csvContent.split('\n').filter(line => line.trim());
+        const newPreviousAssignments = [];
+        
+        // Skip header if it exists
+        const startIndex = lines[0].toLowerCase().includes('employee_name') && 
+                          lines[0].toLowerCase().includes('secret_child_name') ? 1 : 0;
+        
+        for (let i = startIndex; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (line) {
+                const parts = line.split(',').map(part => part.trim());
+                if (parts.length >= 4) {
+                    const assignment = {
+                        employee_name: parts[0],
+                        employee_email: parts[1],
+                        secret_child_name: parts[2],
+                        secret_child_email: parts[3]
+                    };
+                    newPreviousAssignments.push(assignment);
+                }
+            }
+        }
+        
+        if (newPreviousAssignments.length === 0) {
+            showError('No valid previous assignments found in CSV file');
+            return;
+        }
+        
+        previousAssignments = newPreviousAssignments;
+        hideError();
+        
+        // Show success message
+        showSuccess(`Successfully imported ${newPreviousAssignments.length} previous assignments!`);
+        
+    } catch (error) {
+        showError('Error parsing previous assignments CSV file: ' + error.message);
+    }
+}
+
+function handleDragOver(e) {
+    e.preventDefault();
+    const uploadZone = document.getElementById('uploadZone');
+    if (uploadZone) {
+        uploadZone.classList.add('dragover');
+    }
+}
+
+function handleDragLeave(e) {
+    e.preventDefault();
+    const uploadZone = document.getElementById('uploadZone');
+    if (uploadZone) {
+        uploadZone.classList.remove('dragover');
+    }
+}
+
+function handleDrop(e) {
+    e.preventDefault();
+    const uploadZone = document.getElementById('uploadZone');
+    if (uploadZone) {
+        uploadZone.classList.remove('dragover');
+    }
+    
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+        handleFile(files[0]);
+    }
+}
+
+function handleFileSelect(e) {
+    const file = e.target.files[0];
+    if (file) {
+        handleFile(file);
+    }
+}
+
+function handleFile(file) {
+    if (!file.name.toLowerCase().endsWith('.csv')) {
+        showError('Please select a valid CSV file');
+        return;
+    }
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        csvData = e.target.result;
+        showCSVPreview(csvData);
+    };
+    reader.readAsText(file);
+}
+
+function showCSVPreview(csvContent) {
+    // For the new interface, we'll directly import the CSV
+    importCSVFromContent(csvContent);
+}
+
+function importCSVFromContent(csvContent) {
+    if (!csvContent) {
+        showError('No CSV data to import');
+        return;
+    }
+    
+    try {
+        const lines = csvContent.split('\n').filter(line => line.trim());
+        const newEmployees = [];
+        
+        // Skip header if it exists
+        const startIndex = lines[0].toLowerCase().includes('name') && lines[0].toLowerCase().includes('email') ? 1 : 0;
+        
+        for (let i = startIndex; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (line) {
+                const parts = line.split(',').map(part => part.trim());
+                if (parts.length >= 2) {
+                    const name = parts[0];
+                    const email = parts[1];
+                    
+                    if (name && email && isValidEmail(email)) {
+                        newEmployees.push({ name, email });
+                    }
+                }
+            }
+        }
+        
+        if (newEmployees.length === 0) {
+            showError('No valid participants found in CSV file');
+            return;
+        }
+        
+        // Add new participants (avoid duplicates)
+        newEmployees.forEach(emp => {
+            if (!employees.some(existing => existing.email === emp.email)) {
+                employees.push(emp);
+            }
+        });
+        
+        updateEmployeeDisplay();
+        hideError();
+        
+        // Show success message
+        showSuccess(`Successfully imported ${newEmployees.length} participants from CSV!`);
+        
+    } catch (error) {
+        showError('Error parsing CSV file: ' + error.message);
+    }
+}
+
+function cancelCSV() {
+    csvData = null;
+    document.getElementById('csvFile').value = '';
+}
+
+function showSuccess(message) {
+    // Create a temporary success message
+    const successDiv = document.createElement('div');
+    successDiv.className = 'success-message';
+    successDiv.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+    successDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #28a745;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+    `;
+    
+    document.body.appendChild(successDiv);
+    
+    setTimeout(() => {
+        successDiv.remove();
+    }, 3000);
+}
+
+
+
 // Utility functions
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -296,7 +739,13 @@ function isValidEmail(email) {
 // Health check function
 async function checkAPIHealth() {
     try {
-        const response = await fetch(`${API_BASE_URL}/secret_santa/health`);
+        const response = await fetch(`${API_BASE_URL}/secret_santa/health`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            mode: 'cors'
+        });
         if (!response.ok) {
             console.warn('API Gateway is not responding');
             return false;
@@ -310,8 +759,11 @@ async function checkAPIHealth() {
 
 // Check API health on page load
 document.addEventListener('DOMContentLoaded', async function() {
-    const isHealthy = await checkAPIHealth();
-    if (!isHealthy) {
-        showError('API Gateway is not available. Please ensure all microservices are running.');
-    }
+    // Delay the health check to allow services to start
+    setTimeout(async () => {
+        const isHealthy = await checkAPIHealth();
+        if (!isHealthy) {
+            console.warn('API Gateway health check failed, but continuing...');
+        }
+    }, 2000);
 });

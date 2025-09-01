@@ -90,7 +90,7 @@ RSpec.describe SecretSantaService do
         result = service.generate_assignments(duplicate_employees, [])
 
         expect(result[:success]).to be false
-        expect(result[:error]).to include('duplicate')
+        expect(result[:error]).to include('Duplicate')
         expect(result[:assignments]).to be_empty
       end
     end
@@ -165,7 +165,7 @@ RSpec.describe SecretSantaService do
       ]
       result = service.validate_employees(employees)
       expect(result[:valid]).to be false
-      expect(result[:error]).to include('duplicate')
+      expect(result[:error]).to include('Duplicate')
     end
   end
 end

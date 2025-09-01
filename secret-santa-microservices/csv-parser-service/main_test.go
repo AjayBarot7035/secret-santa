@@ -46,11 +46,16 @@ func TestParseEmployeesCSV_ValidData(t *testing.T) {
 John Doe,john.doe@example.com
 Jane Smith,jane.smith@example.com`
 
-	req, err := http.NewRequest("POST", "/parse/employees", strings.NewReader(csvData))
+	requestBody := map[string]string{
+		"csv_data": csvData,
+	}
+	requestJSON, _ := json.Marshal(requestBody)
+
+	req, err := http.NewRequest("POST", "/parse/employees", strings.NewReader(string(requestJSON)))
 	if err != nil {
 		t.Fatal(err)
 	}
-	req.Header.Set("Content-Type", "text/csv")
+	req.Header.Set("Content-Type", "application/json")
 
 	rr := httptest.NewRecorder()
 	handler := http.HandlerFunc(parseEmployeesCSV)
@@ -85,11 +90,16 @@ func TestParseEmployeesCSV_InvalidData(t *testing.T) {
 	// Arrange
 	csvData := `Employee_Name` // Missing email column
 
-	req, err := http.NewRequest("POST", "/parse/employees", strings.NewReader(csvData))
+	requestBody := map[string]string{
+		"csv_data": csvData,
+	}
+	requestJSON, _ := json.Marshal(requestBody)
+
+	req, err := http.NewRequest("POST", "/parse/employees", strings.NewReader(string(requestJSON)))
 	if err != nil {
 		t.Fatal(err)
 	}
-	req.Header.Set("Content-Type", "text/csv")
+	req.Header.Set("Content-Type", "application/json")
 
 	rr := httptest.NewRecorder()
 	handler := http.HandlerFunc(parseEmployeesCSV)
@@ -117,11 +127,16 @@ func TestParseAssignmentsCSV_ValidData(t *testing.T) {
 	csvData := `Employee_Name,Employee_EmailID,Secret_Child_Name,Secret_Child_EmailID
 John Doe,john.doe@example.com,Jane Smith,jane.smith@example.com`
 
-	req, err := http.NewRequest("POST", "/parse/assignments", strings.NewReader(csvData))
+	requestBody := map[string]string{
+		"csv_data": csvData,
+	}
+	requestJSON, _ := json.Marshal(requestBody)
+
+	req, err := http.NewRequest("POST", "/parse/assignments", strings.NewReader(string(requestJSON)))
 	if err != nil {
 		t.Fatal(err)
 	}
-	req.Header.Set("Content-Type", "text/csv")
+	req.Header.Set("Content-Type", "application/json")
 
 	rr := httptest.NewRecorder()
 	handler := http.HandlerFunc(parseAssignmentsCSV)

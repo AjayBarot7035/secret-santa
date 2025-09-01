@@ -18,10 +18,4 @@ class Api::V1::AssignmentsController < ApplicationController
   def health
     render json: { status: 'healthy', service: 'Secret Santa Assignment Service' }
   end
-
-  # Process SQS messages (called by background job)
-  def process_sqs_message
-    # This method will be called by a background job
-    # that processes messages from SQS
-  end
 end

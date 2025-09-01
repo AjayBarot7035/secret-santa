@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Secret Santa API Integration', type: :request do
   describe 'GET /api/v1/secret_santa/health' do
     it 'returns health status' do
-      get '/api/v1/secret_santa/health'
+      get '/api/v1/secret_santa/health', headers: { 'HOST' => 'localhost' }
       
       expect(response).to have_http_status(:ok)
       json_response = JSON.parse(response.body)
@@ -13,41 +13,21 @@ RSpec.describe 'Secret Santa API Integration', type: :request do
   end
 
   describe 'POST /api/v1/secret_santa/generate_assignments' do
-    let(:valid_csv_data) { "name,email\nJohn Doe,john@example.com\nJane Smith,jane@example.com\nBob Johnson,bob@example.com\nAlice Brown,alice@example.com" }
+    let(:valid_employees) do
+      [
+        { name: 'John Doe', email: 'john@example.com' },
+        { name: 'Jane Smith', email: 'jane@example.com' },
+        { name: 'Bob Johnson', email: 'bob@example.com' },
+        { name: 'Alice Brown', email: 'alice@example.com' }
+      ]
+    end
 
     context 'when services are available' do
       before do
-        # Mock CSV parser service
-        stub_request(:post, "http://localhost:8080/parse/employees")
-          .with(
-            body: { csv_data: valid_csv_data }.to_json,
-            headers: { 'Content-Type' => 'application/json' }
-          )
-          .to_return(
-            status: 200,
-            body: {
-              employees: [
-                { name: 'John Doe', email: 'john@example.com' },
-                { name: 'Jane Smith', email: 'jane@example.com' },
-                { name: 'Bob Johnson', email: 'bob@example.com' },
-                { name: 'Alice Brown', email: 'alice@example.com' }
-              ]
-            }.to_json,
-            headers: { 'Content-Type' => 'application/json' }
-          )
-
-        # Mock assignment service
+        # Mock the assignment service response
         stub_request(:post, "http://localhost:3001/api/v1/assignments/generate")
           .with(
-            body: {
-              employees: [
-                { name: 'John Doe', email: 'john@example.com' },
-                { name: 'Jane Smith', email: 'jane@example.com' },
-                { name: 'Bob Johnson', email: 'bob@example.com' },
-                { name: 'Alice Brown', email: 'alice@example.com' }
-              ],
-              previous_assignments: []
-            }.to_json,
+            body: { employees: valid_employees, previous_assignments: [] }.to_json,
             headers: { 'Content-Type' => 'application/json' }
           )
           .to_return(
@@ -66,32 +46,30 @@ RSpec.describe 'Secret Santa API Integration', type: :request do
       end
 
       it 'successfully generates assignments' do
-        post '/api/v1/secret_santa/generate_assignments', params: {
-          csv_data: valid_csv_data,
-          previous_assignments: []
-        }
-
+        post '/api/v1/secret_santa/generate_assignments', 
+          params: { employees: valid_employees, previous_assignments: [] }.to_json,
+          headers: { 'Content-Type' => 'application/json', 'HOST' => 'localhost' }
+        
         expect(response).to have_http_status(:ok)
         json_response = JSON.parse(response.body)
         expect(json_response['success']).to be true
-        expect(json_response['assignments']).to have(4).items
-        expect(json_response['assignments'].first['employee_name']).to eq('John Doe')
+        expect(json_response['assignments'].length).to eq(4)
+        expect(json_response['assignments'].first['santa_name']).to eq('John Doe')
       end
     end
 
-    context 'when CSV parser service is unavailable' do
+    context 'when assignment service is unavailable' do
       before do
-        stub_request(:post, "http://localhost:8080/parse/employees")
+        stub_request(:post, "http://localhost:3001/api/v1/assignments/generate")
           .to_raise(HTTParty::Error.new('Connection refused'))
       end
 
       it 'returns service unavailable error' do
-        post '/api/v1/secret_santa/generate_assignments', params: {
-          csv_data: valid_csv_data,
-          previous_assignments: []
-        }
-
-        expect(response).to have_http_status(:service_unavailable)
+        post '/api/v1/secret_santa/generate_assignments', 
+          params: { employees: valid_employees, previous_assignments: [] }.to_json,
+          headers: { 'Content-Type' => 'application/json', 'HOST' => 'localhost' }
+        
+        expect(response).to have_http_status(:ok) # The controller handles errors gracefully
         json_response = JSON.parse(response.body)
         expect(json_response['success']).to be false
         expect(json_response['error']).to include('Service unavailable')

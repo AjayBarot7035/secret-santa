@@ -45,3 +45,358 @@ Processing by Api::V1::AssignmentsController#generate as */*
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
 
 
+SQS processor disabled - running in development mode with HTTP endpoints
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 01:56:01 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (11.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for ::1 at 2025-08-30 02:02:55 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/apple/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-7.2.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/apple/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-7.2.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 9.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/icon.png" for ::1 at 2025-08-30 02:02:56 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+SQS processor disabled - running in development mode with HTTP endpoints
+Started GET "/api/v1/assignments/health" for ::1 at 2025-08-30 02:04:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (14.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AssignmentsController#health as */*
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:04:44 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:07:42 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+SQS processor disabled - running in development mode with HTTP endpoints
+  [1m[35m (35.6ms)[0m  [1m[35mCREATE DATABASE "assignment_service_development" ENCODING = 'unicode'[0m
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE DATABASE "assignment_service_test" ENCODING = 'unicode'[0m
+SQS processor disabled - running in development mode with HTTP endpoints
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:43:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (18.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:46:30 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 422 Unprocessable Content in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:48:15 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+SQS processor disabled - running in development mode with HTTP endpoints
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:49:41 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"John Doe", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"John Doe", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 422 Unprocessable Content in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:49:53 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 422 Unprocessable Content in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:50:02 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-08-30 02:50:34 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 422 Unprocessable Content in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+SQS processor disabled - running in development mode with HTTP endpoints
+Started GET "/api/v1/assignments/health" for ::1 at 2025-09-01 18:45:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AssignmentsController#health as */*
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 10.6ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 18:45:52 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"John Doe", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"John Doe", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.4ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 18:48:24 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 18:55:30 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[{"employee_name"=>"John Doe", "employee_email"=>"[FILTERED]", "secret_child_name"=>"[FILTERED]", "secret_child_email"=>"[FILTERED]"}], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}, {"name"=>"Bob Johnson", "email"=>"[FILTERED]"}], "previous_assignments"=>[{"employee_name"=>"John Doe", "employee_email"=>"[FILTERED]", "secret_child_name"=>"[FILTERED]", "secret_child_email"=>"[FILTERED]"}]}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 18:58:22 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:00:04 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:02:23 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:05:12 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:06:55 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:08:06 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:11:12 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:14:09 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:15:17 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"John Doe", "email"=>"[FILTERED]"}, {"name"=>"Jane Smith", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:16:28 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:17:24 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Layla Graham", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/v1/assignments/generate" for ::1 at 2025-09-01 19:30:19 +0530
+Processing by Api::V1::AssignmentsController#generate as */*
+  Parameters: {"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[], "assignment"=>{"employees"=>[{"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Benjamin Collins", "email"=>"[FILTERED]"}, {"name"=>"Isabella Scott", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Piper Stewart", "email"=>"[FILTERED]"}, {"name"=>"Spencer Allen", "email"=>"[FILTERED]"}, {"name"=>"Charlie Wright", "email"=>"[FILTERED]"}, {"name"=>"Hamish Murray", "email"=>"[FILTERED]"}, {"name"=>"Charlie Ross", "email"=>"[FILTERED]"}, {"name"=>"Ethan Murray", "email"=>"[FILTERED]"}, {"name"=>"Matthew King", "email"=>"[FILTERED]"}, {"name"=>"Mark Lawrence", "email"=>"[FILTERED]"}], "previous_assignments"=>[]}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (5.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (15.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (506.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "assignment_service_test"[0m
+  [1m[35m (594.0ms)[0m  [1m[35mCREATE DATABASE "assignment_service_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (38.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (22.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:16:54.788341', '2025-09-01 14:16:54.788345') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:16:54.792748' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:16:54.797209', '2025-09-01 14:16:54.797214') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (12.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (103.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "assignment_service_test"[0m
+  [1m[35m (166.7ms)[0m  [1m[35mCREATE DATABASE "assignment_service_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (48.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (15.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:17:48.920103', '2025-09-01 14:17:48.920106') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (1.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:17:48.948689' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:17:48.964112', '2025-09-01 14:17:48.964115') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (18.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (17.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (106.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "assignment_service_test"[0m
+  [1m[35m (204.8ms)[0m  [1m[35mCREATE DATABASE "assignment_service_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (56.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:18:30.296217', '2025-09-01 14:18:30.296220') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (17.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:18:30.319482' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:18:30.353194', '2025-09-01 14:18:30.353198') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Load (18.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (145.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "assignment_service_test"[0m
+  [1m[35m (182.5ms)[0m  [1m[35mCREATE DATABASE "assignment_service_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (41.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-01 14:39:46.967936', '2025-09-01 14:39:46.967939') RETURNING "key"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Update (1.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-01 14:39:46.983912' WHERE "ar_internal_metadata"."key" = 'environment'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'f8d38cde0b952833495fd32588ecfd10debba781', '2025-09-01 14:39:47.013623', '2025-09-01 14:39:47.013626') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m

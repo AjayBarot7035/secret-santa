@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🛑 Stopping Secret Santa Microservices..."
+echo "🛑 Stopping Secret Santa Generator..."
 
 # Stop CSV Parser Service
 echo "Stopping CSV Parser Service..."
