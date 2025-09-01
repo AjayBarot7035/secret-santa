@@ -266,6 +266,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [ ] **AWS Setup** - Configure AWS infrastructure for production deployment
 - [ ] **Terraform** - Implement Infrastructure as Code for AWS resources
 - [ ] **AWS CLI Tasks** - Automate AWS operations and deployments
+- [ ] **CI/CD Pipeline** - Set up continuous integration and deployment pipeline
 - [ ] **Secret Management for AWS** - Implement secure secret storage using AWS Secrets Manager or Parameter Store
 
 ### Frontend Enhancement
