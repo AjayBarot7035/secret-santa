@@ -42,6 +42,7 @@ pickle-email-*.html
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/tmp/local_secret.txt
 
 # Environment variables
 .env
